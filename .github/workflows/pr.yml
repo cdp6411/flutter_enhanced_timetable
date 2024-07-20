@@ -9,7 +9,7 @@ jobs:
     steps:
       - uses: samspills/assign-pr-to-author@v1.0.2
         with:
-          repo-token: ${{ secrets.BOT_TOKEN }}
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
 
   approve-dependabot-pr:
     if: github.event.action == 'opened' && github.event.pull_request.user.login == 'dependabot[bot]'
