@@ -3,13 +3,13 @@ name: PR
 on: pull_request_target
 
 jobs:
-  # assign-author:
-  #   if: github.event.action == 'opened'
-  #   runs-on: ubuntu-latest
-  #   steps:
-  #     - uses: samspills/assign-pr-to-author@v1.0.2
-  #       with:
-  #         repo-token: ${{ secrets.GITHUB_TOKEN }}
+  assign-author:
+    if: github.event.action == 'opened'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: samspills/assign-pr-to-author@v1.0.2
+        with:
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
 
   approve-dependabot-pr:
     if: github.event.action == 'opened' && github.event.pull_request.user.login == 'dependabot[bot]'
