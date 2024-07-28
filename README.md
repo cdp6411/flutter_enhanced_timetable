@@ -319,3 +319,26 @@ The example above therefore draws a light gray background before 8 a.m. and af
 [`VisibleDateRange.weekAligned`]: https://pub.dev/documentation/timetable/latest/timetable/VisibleDateRange/foo.html
 <!-- time -->
 [<kbd>time</kbd>]: https://pub.dev/packages/time
+
+## How to build a dart package
+
+[How to build a package in dart](https://www.youtube.com/watch?v=8V_TLiWszK0&t=1s)
+
+## Commands
+
+- `$ dart pub get`: Fetch dependencies
+- `$ dart test`: Runs tests
+- `$ dart run example/example.dart` Run the example
+
+Adding a package the package depends on
+- `$ dart pub add path`: note `path` is another dart package
+
+To show outdated packages
+- `$dart pub outdated`
+
+To upgrade dependencies set by lockfile
+- `$ dart pub upgrade`
+
+To upgrade dependencies blocked by whats set in pubspec yaml
+This will update whats in pubspec yaml
+- `dart pub upgrade --major-version`
