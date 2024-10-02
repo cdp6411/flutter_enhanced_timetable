@@ -1,7 +1,7 @@
 name: timetable
 description: Customizable, animated calendar widget including day, week, and month views
-version: 1.0.0-alpha.13
-repository: https://github.com/JonasWanke/timetable
+version: 0.0.0
+repository: https://github.com/CaughtUp-LLC/Flutter-Enhanced-Timetable
 screenshots:
   - description: Navigation with synchronized month and week views
     path: doc/demo-navigation.webp

@@ -1,4 +1,4 @@
-package dev.wanke.timetable.example
+package dev.timetable.example
 
 import io.flutter.embedding.android.FlutterActivity
 

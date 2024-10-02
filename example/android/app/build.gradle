@@ -42,8 +42,7 @@ android {
     }
 
     defaultConfig {
-        applicationId "dev.wanke.timetable.example"
-        // https://github.com/JonasWanke/timetable/actions/runs/5045070337/jobs/9048885559?pr=142
+        applicationId "dev.timetable.example"
         minSdkVersion 19
         targetSdkVersion flutter.targetSdkVersion
         versionCode flutterVersionCode.toInteger()
