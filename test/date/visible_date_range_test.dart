@@ -1,6 +1,6 @@
 import 'package:glados/glados.dart';
 import 'package:flutter_enhanced_timetable/src/utils.dart';
-import 'package:flutter_enhanced_timetable/flutter-enhanced-timetable.dart';
+import 'package:flutter_enhanced_timetable/flutter_enhanced_timetable.dart';
 
 void main() {
   group('VisibleDateRange.days', () {

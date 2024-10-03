@@ -4,7 +4,7 @@ import 'package:black_hole_flutter/black_hole_flutter.dart';
 import 'package:flutter/material.dart';
 // ignore: implementation_imports
 import 'package:flutter_enhanced_timetable/src/utils.dart';
-import 'package:flutter_enhanced_timetable/flutter-enhanced-timetable.dart';
+import 'package:flutter_enhanced_timetable/flutter_enhanced_timetable.dart';
 
 // A basic EventProvider containing a single event:
 // eventProvider: EventProvider.list([
