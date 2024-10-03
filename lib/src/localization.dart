@@ -127,7 +127,7 @@ bool debugCheckHasTimetableLocalizations(BuildContext context) {
           'to be provided by a Localizations widget ancestor.',
         ),
         ErrorDescription(
-          'The timetable library uses Localizations to generate messages, '
+          'The flutter_enhanced_timetable library uses Localizations to generate messages, '
           'labels, and abbreviations.',
         ),
         ErrorHint(

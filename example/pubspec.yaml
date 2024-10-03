@@ -1,5 +1,5 @@
 name: timetable_example
-description: A simple example app for the timetable package
+description: A simple example app for the flutter_enhanced_timetable package
 publish_to: none
 
 environment:
@@ -10,10 +10,10 @@ dependencies:
   debug_overlay: ^0.2.1
   flutter:
     sdk: flutter
+  flutter_enhanced_timetable:
+    path: ../
   flutter_localizations:
     sdk: flutter
-  timetable:
-    path: ../
 
 dev_dependencies:
   flutter_lints: ^2.0.3

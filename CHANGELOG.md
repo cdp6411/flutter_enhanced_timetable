@@ -4,6 +4,9 @@ All notable changes to this project will be documented in this file.
 
 This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## Notice
+
+This package, `flutter_enhanced_timetable`, is a fork of the original package being maintained for a production app. For more details, please refer to the original repository: [timetable](https://pub.dev/packages/timetable).
 
 <!-- Template:
 ## NEW · 2023-xx-xx
@@ -16,6 +19,15 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 ### 🏗️ Refactoring
 ### 📦 Build & CI
 -->
+
+## 0.0.0 · 2024-10-03
+
+### 🎉 Initial Release
+
+* Initial release of the forked package `flutter_enhanced_timetable`.
+* Upgraded dependencies.
+* Enabled null safety.
+* Enabled Dart 3 compatibility.
 
 ## 1.0.0-alpha.13 · 2023-05-30
 

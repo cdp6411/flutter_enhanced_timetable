@@ -1,6 +1,6 @@
 import 'package:test/test.dart';
-import 'package:timetable/src/event/event.dart';
-import 'package:timetable/src/utils.dart';
+import 'package:flutter_enhanced_timetable/src/event/event.dart';
+import 'package:flutter_enhanced_timetable/src/utils.dart';
 
 void main() {
   group('TimetableEvent', () {

@@ -1,12 +1,23 @@
+# flutter_enhanced_timetable
+
 📅 Customizable, animated calendar widget including day, week, and month views.
+
+## Notice
+
+This package, `flutter_enhanced_timetable`, is a fork of the original `timetable` package. We have created this fork to maintain and enhance the package for use in a production app. For more details about the original package, please refer to its repository: [timetable](https://pub.dev/packages/timetable).
+
+## Features
+
+- Customizable, animated calendar widget
+- Day, week, and month views
 
 |                                       Navigation                                        |                                       Animation                                        |
 | :-------------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------: |
-| ![](https://github.com/JonasWanke/timetable/raw/main/doc/demo-navigation.webp?raw=true) | ![](https://github.com/JonasWanke/timetable/raw/main/doc/demo-animation.webp?raw=true) |
+| ![](https://github.com/CaughtUp-LLC/Flutter-Enhanced-Timetable/raw/main/doc/demo-navigation.webp?raw=true) | ![](https://github.com/CaughtUp-LLC/Flutter-Enhanced-Timetable/raw/main/doc/demo-animation.webp?raw=true) |
 
 |                                       Callbacks                                        |                               Changing the [`VisibleDateRange`]                               |
 | :------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------------: |
-| ![](https://github.com/JonasWanke/timetable/raw/main/doc/demo-callbacks.webp?raw=true) | ![](https://github.com/JonasWanke/timetable/raw/main/doc/demo-visibleDateRange.webp?raw=true) |
+| ![](https://github.com/CaughtUp-LLC/Flutter-Enhanced-Timetable/raw/main/doc/demo-callbacks.webp?raw=true) | ![](https://github.com/CaughtUp-LLC/Flutter-Enhanced-Timetable/raw/main/doc/demo-visibleDateRange.webp?raw=true) |
 
 - [Available Layouts](#available-layouts)
 - [Getting started](#getting-started)
@@ -28,7 +39,7 @@ A Timetable widget that displays multiple consecutive days.
 
 |                                                 Light Mode                                                  |                                                 Dark Mode                                                  |
 | :---------------------------------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------------------------------: |
-| ![](https://github.com/JonasWanke/timetable/raw/main/doc/screenshot-MultiDateTimetable-light.webp?raw=true) | ![](https://github.com/JonasWanke/timetable/raw/main/doc/screenshot-MultiDateTimetable-dark.webp?raw=true) |
+| ![](https://github.com/CaughtUp-LLC/Flutter-Enhanced-Timetable/raw/main/doc/screenshot-MultiDateTimetable-light.webp?raw=true) | ![](https://github.com/CaughtUp-LLC/Flutter-Enhanced-Timetable/raw/main/doc/screenshot-MultiDateTimetable-dark.webp?raw=true) |
 
 ### [`RecurringMultiDateTimetable`]
 
@@ -36,7 +47,7 @@ A Timetable widget that displays multiple consecutive days without their dates a
 
 |                                                      Light Mode                                                      |                                                      Dark Mode                                                      |
 | :------------------------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------------------: |
-| ![](https://github.com/JonasWanke/timetable/raw/main/doc/screenshot-RecurringMultiDateTimetable-light.webp?raw=true) | ![](https://github.com/JonasWanke/timetable/raw/main/doc/screenshot-RecurringMultiDateTimetable-dark.webp?raw=true) |
+| ![](https://github.com/CaughtUp-LLC/Flutter-Enhanced-Timetable/raw/main/doc/screenshot-RecurringMultiDateTimetable-light.webp?raw=true) | ![](https://github.com/CaughtUp-LLC/Flutter-Enhanced-Timetable/raw/main/doc/screenshot-RecurringMultiDateTimetable-dark.webp?raw=true) |
 
 ### [`CompactMonthTimetable`]
 
@@ -44,7 +55,7 @@ A Timetable widget that displays [`MonthWidget`]s in a page view.
 
 |                                                   Light Mode                                                   |                                                   Dark Mode                                                   |
 | :------------------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------------: |
-| ![](https://github.com/JonasWanke/timetable/raw/main/doc/screenshot-CompactMonthTimetable-light.webp?raw=true) | ![](https://github.com/JonasWanke/timetable/raw/main/doc/screenshot-CompactMonthTimetable-dark.webp?raw=true) |
+| ![](https://github.com/CaughtUp-LLC/Flutter-Enhanced-Timetable/raw/main/doc/screenshot-CompactMonthTimetable-light.webp?raw=true) | ![](https://github.com/CaughtUp-LLC/Flutter-Enhanced-Timetable/raw/main/doc/screenshot-CompactMonthTimetable-dark.webp?raw=true) |
 
 
 ## Getting started
@@ -204,7 +215,7 @@ TimetableConfig<BasicEvent>(
 
 ### Drag and Drop
 
-<img src="https://github.com/JonasWanke/timetable/raw/main/doc/demo-dragAndDrop.webp?raw=true" width="400px" alt="Drag and Drop demo" />
+<img src="https://github.com/CaughtUp-LLC/Flutter-Enhanced-Timetable/raw/main/doc/demo-dragAndDrop.webp?raw=true" width="400px" alt="Drag and Drop demo" />
 
 You can easily make events inside the content area of [`MultiDateTimetable`] or [`RecurringMultiDateTimetable`] draggable by wrapping them in a [`PartDayDraggableEvent`]:
 
@@ -254,7 +265,7 @@ See [`PartDayDraggableEvent.geometryKeys`] for the exact behavior.
 
 ### Time Overlays
 
-<img src="https://github.com/JonasWanke/timetable/raw/main/doc/screenshot-timeOverlays.webp?raw=true" width="400px" alt="Drag and Drop demo" />
+<img src="https://github.com/CaughtUp-LLC/Flutter-Enhanced-Timetable/raw/main/doc/screenshot-timeOverlays.webp?raw=true" width="400px" alt="Drag and Drop demo" />
 
 In addition to displaying events, [`MultiDateTimetable`] and [`RecurringMultiDateTimetable`] can display overlays for time ranges on every day.
 In the screenshot above, a light gray overlay is displayed on weekdays before 8 a.m. and after 8 p.m., and over the full day for weekends.
@@ -282,7 +293,7 @@ TimetableConfig<MyEvent>(
 The provider is just a function that receives a date and returns a list of [`TimeOverlay`] for that date.
 The example above therefore draws a light gray background before 8 a.m. and after 8 p.m. on every day.
 
-[example/main.dart]: https://github.com/JonasWanke/timetable/blob/main/example/lib/main.dart
+[example/main.dart]: https://github.com/CaughtUp-LLC/Flutter-Enhanced-Timetable/blob/main/example/lib/main.dart
 <!-- Flutter -->
 [`DateTime`]: https://api.flutter.dev/flutter/dart-core/DateTime-class.html
 [`Duration`]: https://api.flutter.dev/flutter/dart-core/Duration-class.html
