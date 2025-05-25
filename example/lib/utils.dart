@@ -1,12 +1,12 @@
 import 'package:black_hole_flutter/black_hole_flutter.dart';
-import 'package:debug_overlay/debug_overlay.dart';
+// import 'package:debug_overlay/debug_overlay.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_enhanced_timetable/flutter_enhanced_timetable.dart';
 
-final _mediaOverrideState = ValueNotifier(MediaOverrideState());
+// final _mediaOverrideState = ValueNotifier(MediaOverrideState());
 final _supportedLocales = [
   const Locale('de'),
   const Locale('en'),
@@ -20,15 +20,15 @@ final _supportedLocales = [
   const Locale('zh', 'TW'),
 ];
 
-void initDebugOverlay() {
-  // https://pub.dev/packages/debug_overlay
-  DebugOverlay.helpers.value = [
-    MediaOverrideDebugHelper(
-      _mediaOverrideState,
-      supportedLocales: _supportedLocales,
-    ),
-  ];
-}
+// void initDebugOverlay() {
+//   // https://pub.dev/packages/debug_overlay
+//   DebugOverlay.helpers.value = [
+//     MediaOverrideDebugHelper(
+//       _mediaOverrideState,
+//       supportedLocales: _supportedLocales,
+//     ),
+//   ];
+// }
 
 class ExampleApp extends StatelessWidget {
   const ExampleApp({required this.child});
@@ -37,25 +37,25 @@ class ExampleApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ValueListenableBuilder(
-      valueListenable: _mediaOverrideState,
-      builder: (context, overrideState, _) {
+    // return ValueListenableBuilder(
+    //   valueListenable: _mediaOverrideState,
+    //   builder: (context, overrideState, _) {
         return MaterialApp(
           title: 'Timetable example',
           theme: _createTheme(Brightness.light),
           darkTheme: _createTheme(Brightness.dark),
-          themeMode: overrideState.themeMode,
-          locale: overrideState.locale,
+          // themeMode: overrideState.themeMode,
+          // locale: overrideState.locale,
           localizationsDelegates: const [
             TimetableLocalizationsDelegate(),
             ...GlobalMaterialLocalizations.delegates,
           ],
           supportedLocales: _supportedLocales,
-          builder: kIsWeb ? null : DebugOverlay.builder(),
+          // builder: kIsWeb ? null : DebugOverlay.builder(),
           home: SafeArea(child: Scaffold(body: child)),
         );
-      },
-    );
+      // },
+    // );
   }
 
   ThemeData _createTheme(Brightness brightness) {

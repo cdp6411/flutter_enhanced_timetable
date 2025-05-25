@@ -10,7 +10,7 @@ import 'positioning_demo.dart';
 import 'utils.dart';
 
 Future<void> main() async {
-  initDebugOverlay();
+  // initDebugOverlay();
   runApp(ExampleApp(child: TimetableExample()));
 }
 

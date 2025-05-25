@@ -480,7 +480,7 @@ class _EventsLayout extends RenderBox
   void performLayout() {
     assert(!sizedByParent);
 
-    if (children.isEmpty) {
+    if (constraints.maxWidth == 0.0 || children.isEmpty) {
       size = Size(constraints.maxWidth, 0);
       return;
     }
