@@ -20,6 +20,19 @@ This package, `flutter_enhanced_timetable`, is a fork of the original package be
 ### 📦 Build & CI
 -->
 
+## 0.0.2 · 2025-05-27
+
+### 🎉 Maintenance
+
+* Automated pipeline for publishing the package to pub.dev.
+
+## 0.0.1 · 2025-05-27
+
+### 🎉 Maintenance
+
+* Upgraded dependencies.
+* Upgraded Example project Gradle files to use the latest Android Gradle Plugin.
+
 ## 0.0.0 · 2024-10-03
 
 ### 🎉 Initial Release

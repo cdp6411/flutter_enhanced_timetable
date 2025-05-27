@@ -1,6 +1,6 @@
 name: flutter_enhanced_timetable
 description: Customizable, animated calendar widget including day, week, and month views.
-version: 0.0.1
+version: 0.0.2
 repository: https://github.com/CaughtUp-LLC/Flutter-Enhanced-Timetable
 screenshots:
   - description: Navigation with synchronized month and week views
