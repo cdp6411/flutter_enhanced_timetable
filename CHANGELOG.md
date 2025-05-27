@@ -20,12 +20,6 @@ This package, `flutter_enhanced_timetable`, is a fork of the original package be
 ### 📦 Build & CI
 -->
 
-## 1.0.1 · 2025-05-27
-
-### 🎉 Maintenance
-
-* Automated pipeline for publishing the package to pub.dev.
-
 ## 0.0.1 · 2025-05-27
 
 ### 🎉 Maintenance

@@ -2,6 +2,8 @@ include: package:flutter_lints/flutter.yaml
 
 linter:
   rules:
+    unused_element_parameter: false
+    deprecated_member_use: false
     always_declare_return_types: true
     avoid_bool_literals_in_conditional_expressions: true
     avoid_catching_errors: true
