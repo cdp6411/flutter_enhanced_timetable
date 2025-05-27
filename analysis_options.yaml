@@ -1,13 +1,5 @@
 include: package:flutter_lints/flutter.yaml
 
-analyzer:
-  language:
-    strict-casts: true
-    strict-inference: true
-    strict-raw-types: true
-  plugins:
-    - dart_code_metrics
-
 linter:
   rules:
     always_declare_return_types: true
@@ -78,49 +70,3 @@ linter:
     use_string_buffers: true
     use_string_in_part_of_directives: true
     use_super_parameters: true
-
-dart_code_metrics:
-  rules:
-    - always-remove-listener
-    - avoid-border-all
-    - avoid-cascade-after-if-null
-    - avoid-collection-methods-with-unrelated-types
-    - avoid-duplicate-exports
-    - avoid-global-state
-    - avoid-missing-enum-constant-in-map
-    - avoid-nested-conditional-expressions:
-        acceptable-level: 3
-    - avoid-shrink-wrap-in-lists
-    - avoid-top-level-members-in-tests
-    - avoid-unnecessary-setstate
-    - avoid-unnecessary-type-assertions
-    - avoid-unnecessary-type-casts
-    - avoid-unrelated-type-assertions
-    - avoid-unused-parameters
-    - avoid-wrapping-in-padding
-    - binary-expression-operand-order
-    - check-for-equals-in-render-object-setters
-    - consistent-update-render-object
-    - double-literal-format
-    - missing-test-assertion
-    - no-boolean-literal-compare
-    - no-equal-then-else
-    - no-object-declaration
-    - prefer-async-await
-    - prefer-const-border-radius # ?
-    - prefer-correct-edge-insets-constructor
-    - prefer-correct-test-file-name
-    - prefer-enums-by-name
-    - prefer-extracting-callbacks:
-        allowed-line-count: 5
-        ignored-named-arguments:
-          - builder
-          - rowBuilder
-    - prefer-first
-    - prefer-immediate-return
-    - prefer-intl-name
-    - prefer-iterable-of
-    - prefer-last
-    - prefer-trailing-comma
-    - provide-correct-intl-args
-    - tag-name
