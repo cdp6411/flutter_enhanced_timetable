@@ -12,6 +12,7 @@ typedef AllDayOverflowBuilder<E extends Event> = Widget Function(
   BuildContext context,
   DateTime date,
   List<E> overflowedEvents,
+  String text,
 );
 
 class DefaultEventBuilder<E extends Event> extends InheritedWidget {
@@ -23,9 +24,11 @@ class DefaultEventBuilder<E extends Event> extends InheritedWidget {
   })  : allDayBuilder =
             allDayBuilder ?? ((context, event, _) => builder(context, event)),
         allDayOverflowBuilder = allDayOverflowBuilder ??
-            ((context, date, overflowedEvents) => MultiDateEventHeaderOverflow(
+            ((context, date, overflowedEvents, text) =>
+                MultiDateEventHeaderOverflow(
                   date,
                   overflowCount: overflowedEvents.length,
+                  text: text,
                 ));
 
   final EventBuilder<E> builder;

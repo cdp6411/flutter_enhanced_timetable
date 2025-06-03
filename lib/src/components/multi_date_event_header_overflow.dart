@@ -30,11 +30,13 @@ class MultiDateEventHeaderOverflow extends StatelessWidget {
     this.date, {
     super.key,
     required this.overflowCount,
+    required this.text,
   })  : assert(date.debugCheckIsValidTimetableDate()),
         assert(overflowCount >= 1);
 
   final DateTime date;
   final int overflowCount;
+  final String text;
 
   @override
   Widget build(BuildContext context) {
@@ -43,7 +45,8 @@ class MultiDateEventHeaderOverflow extends StatelessWidget {
     return BasicAllDayEventWidget(
       BasicEvent(
         id: date,
-        title: TimetableLocalizations.of(context).allDayOverflow(overflowCount),
+        title: TimetableLocalizations.of(context)
+            .allDayOverflow(overflowCount, text),
         backgroundColor: context.theme.colorScheme.background.withOpacity(0),
         start: date,
         end: date.atEndOfDay,

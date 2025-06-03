@@ -39,10 +39,12 @@ class MultiDateEventHeader<E extends Event> extends StatelessWidget {
     super.key,
     this.onBackgroundTap,
     this.style,
+    this.text = 'all-day events',
   });
 
   final DateTapCallback? onBackgroundTap;
   final MultiDateEventHeaderStyle? style;
+  final String text;
 
   @override
   Widget build(BuildContext context) {
@@ -66,6 +68,7 @@ class MultiDateEventHeader<E extends Event> extends StatelessWidget {
           width: constraints.maxWidth,
           eventHeight: style.eventHeight,
           maxEventRows: maxEventRows,
+          text: text,
         ),
       );
     });
@@ -84,6 +87,7 @@ class MultiDateEventHeader<E extends Event> extends StatelessWidget {
     required double width,
     required double eventHeight,
     required int maxEventRows,
+    required String text,
   }) {
     final onBackgroundTap = this.onBackgroundTap ??
         DefaultTimetableCallbacks.of(context)?.onDateBackgroundTap;
@@ -105,6 +109,7 @@ class MultiDateEventHeader<E extends Event> extends StatelessWidget {
                 [],
         eventHeight: eventHeight,
         maxEventRows: maxEventRows,
+        text: text,
       ),
     );
   }
@@ -186,12 +191,14 @@ class _MultiDateEventHeaderEvents<E extends Event> extends StatefulWidget {
     required this.events,
     required this.eventHeight,
     required this.maxEventRows,
+    required this.text,
   });
 
   final DatePageValue pageValue;
   final List<E> events;
   final double eventHeight;
   final int maxEventRows;
+  final String text;
 
   @override
   State<_MultiDateEventHeaderEvents<E>> createState() =>
@@ -312,7 +319,8 @@ class _MultiDateEventHeaderEventsState<E extends Event>
             key: ValueKey(date),
             dateInterval: dateInterval,
             yPosition: widget.maxEventRows,
-            child: allDayOverflowBuilder(context, date, overflowedEvents),
+            child: allDayOverflowBuilder(
+                context, date, overflowedEvents, widget.text),
           );
         }),
       ],
