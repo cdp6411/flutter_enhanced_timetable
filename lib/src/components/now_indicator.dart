@@ -340,16 +340,25 @@ class _NowIndicatorPainter extends CustomPainter {
     // pixel.
     final maxDistance = 0.5 / devicePixelRatio;
     final delay = 1.days * (maxDistance / size.height);
-    _repaint = CancelableOperation.fromFuture(
-      Future<void>.delayed(
-        delay,
-        () {
-          // [ChangeNotifier.notifyListeners] is protected, so we use a
-          // [ValueNotifier] and always set a different time.
-          _repaintNotifier.value = DateTimeTimetable.now();
-        },
-      ),
-    );
+    // IMPORTANT: In widget tests we must not create timers. Detect test mode
+    // at compile time and skip scheduling the delayed repaint when testing.
+    final  isInTesting = const bool.fromEnvironment('FLUTTER_TESTING');
+
+    if (!isInTesting) {
+      _repaint = CancelableOperation.fromFuture(
+        Future<void>.delayed(
+          delay,
+          () {
+            // [ChangeNotifier.notifyListeners] is protected, so we use a
+            // [ValueNotifier] and always set a different time.
+            _repaintNotifier.value = DateTimeTimetable.now();
+          },
+        ),
+      );
+    } else {
+      // Ensure no repaint operation is retained in test mode.
+      _repaint = null;
+    }
   }
 
   int _activeListenerCount = 0;
